@@ -2,7 +2,7 @@ import kotlin.math.sqrt
 
 typealias Position = Triple<Int,Int,Int>
 
-fun <T> allPairs(arr: List<T>): Sequence<Pair<T, T>> = sequence {
+private fun <T> allPairs(arr: List<T>): Sequence<Pair<T, T>> = sequence {
     for(i in 0 until arr.size-1)
         for(j in i+1 until arr.size)
             yield(arr[i] to arr[j])
